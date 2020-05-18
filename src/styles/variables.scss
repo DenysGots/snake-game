@@ -1,0 +1,68 @@
+@import 'colors.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=latin-ext');
+
+/* Scaffolding */
+$main-view-height: 41vh;
+$weather-card-height: 200px;
+$weather-card-width: 120px;
+$sun-dimension: 60px;
+$moon-dimension: 100px;
+
+/* Fonts */
+$font-default: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-color-default: $color-black;
+/* Font size */
+$font-size-small: 12px;
+$font-size-default: 14px;
+$font-size-middle: 16px;
+$font-size-extra: 18px;
+$font-size-big: 22px;
+$font-size-hero: 28px;
+$font-size-extra-big: 36px;
+/* Line height */
+$line-height-small: 14px;
+$line-height-default: 18px;
+$line-height-extra: 20px;
+$line-height-big: 22px;
+$line-height-hero: 24px;
+/* Font weight */
+$font-weight-default: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 800;
+
+/* Spaces */
+$space-xxs: 1px;
+$space-xs: 2px;
+$space-sm: 5px;
+$space-xsm: 7px;
+$space-md: 10px;
+$space-xmd: 12px;
+$space-lg: 15px;
+$space-xl: 30px;
+
+/* Lines */
+$line-default: 1px;
+$line-medium: 2px;
+$line-thick: 3px;
+$line-fat: 4px;
+
+/* Border-radius */
+$border-radius-default: 5px;
+
+/* Z-indexes */
+$z-index-main-page: 0;
+$z-index-day-time-view: 100;
+$z-index-stars: 200;
+$z-index-sun: 300;
+$z-index-moon: 400;
+$z-index-clouds: 500;
+$z-index-lightning: 600;
+$z-index-rain: 700;
+$z-index-snow: 700;
+$z-index-fog: 800;
+$z-index-water-drops: 900;
+
+/* Box-shadows */
+$box-shadow-default: 0 0 5px 0 $color-box-shadow;
+$box-shadow-hover: 0 0 10px 0 $color-box-shadow-hover;

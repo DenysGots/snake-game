@@ -1,0 +1,18 @@
+@import '../../../styles/variables.scss';
+
+:host {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.app-main-page {
+  contain: content;
+  height: auto;
+  min-height: 100%;
+  overflow: auto;
+  position: relative;
+  transition: background 1.0s ease-in-out;
+  width: 100%;
+  z-index: $z-index-main-page;
+}
