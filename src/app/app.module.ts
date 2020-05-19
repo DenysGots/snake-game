@@ -1,4 +1,5 @@
 import { TransferHttpCacheModule } from '@nguniversal/common';
+import { StoreModule } from '@ngrx/store';
 
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -14,6 +15,7 @@ import { Config } from './app.config';
 import { routes } from './app.routing';
 
 import { MainPageComponent } from './components/main-page/main-page.component';
+import { metaReducers, reducers } from './reducers';
 
 export function initApp(config: Config) {
   return () => config.init();
@@ -33,7 +35,10 @@ export function initApp(config: Config) {
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })
   ],
   providers: [
     {

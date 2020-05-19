@@ -1,4 +1,14 @@
 /* Interfaces */
+export interface State {
+  board: {
+    size: number;
+    food: []
+  };
+  snake: {
+    segments: [];
+  };
+  difficulty: Difficulty
+}
 
 /* Types */
 export type ConfigFile = {
@@ -7,3 +17,8 @@ export type ConfigFile = {
 };
 
 /* Enums */
+export enum Difficulty {
+  easy = 'EASY',
+  medium = 'MEDIUM',
+  hard = 'HARD'
+}
