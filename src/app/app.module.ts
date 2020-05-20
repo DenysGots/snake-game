@@ -8,14 +8,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppComponent } from './app.component';
 import { Config } from './app.config';
 import { routes } from './app.routing';
 
-import { MainPageComponent } from './components/main-page/main-page.component';
 import { metaReducers, reducers } from './reducers';
+
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { GameBoardComponent } from './components/game-board/game-board.component';
+import { BoardCellComponent } from './components/board-cell/board-cell.component';
 
 export function initApp(config: Config) {
   return () => config.init();
@@ -24,7 +28,9 @@ export function initApp(config: Config) {
 @NgModule({
   declarations: [
     AppComponent,
-    MainPageComponent
+    MainPageComponent,
+    GameBoardComponent,
+    BoardCellComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +41,7 @@ export function initApp(config: Config) {
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     MatButtonModule,
     StoreModule.forRoot(reducers, {
       metaReducers
