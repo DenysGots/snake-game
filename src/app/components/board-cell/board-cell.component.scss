@@ -1,0 +1,47 @@
+@import '../../../styles/variables.scss';
+
+// TODO: cell size should adapt to maximum width, depending on container width and board size (number of cells in a row)
+$cell-size: 50px;
+
+$surface-glare-position: #{$cell-size / 6.25};
+$surface-glare-gradient: radial-gradient(
+    farthest-corner at $surface-glare-position $surface-glare-position,
+    rgba(255, 255, 255, 0.8) 2%,
+    rgba(255, 255, 255, 0.71) 4%,
+    rgba(255, 255, 255, 0.52) 10%,
+    rgba(255, 255, 255, 0.29) 17%,
+    rgba(255, 255, 255, 0) 32%
+);
+
+:host {
+  position: relative;
+}
+
+.app-game-cell {
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-default;
+  contain: content;
+  height: $cell-size;
+  overflow: auto;
+  position: relative;
+  width: $cell-size;
+
+  &__empty {
+    background:
+      $surface-glare-gradient,
+      linear-gradient(145deg, rgba(100, 100, 100, 0.4) 0%, rgba(170, 170, 170, 0.7) 10%, #ffffff 100%);
+  }
+
+  &__snake {
+    background:
+      $surface-glare-gradient,
+      linear-gradient(145deg, #777777 0%, #3d3d3d 5%, $color-black 100%);
+  }
+
+  &__food {
+    background:
+      url('/assets/img/cherry.png') center center / 100% 100% no-repeat,
+      $surface-glare-gradient,
+      linear-gradient(145deg, #e5ecff 0%, #4f6fc9 45%, #1846c4 100%);
+  }
+}

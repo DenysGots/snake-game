@@ -6,15 +6,16 @@
   width: 100%;
 }
 
-.app-main-page {
-  background-color: $color-light_gray;
+.app-game-board {
+  background-color: $color-white;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-default;
   contain: content;
-  height: 100vh;
+  height: auto;
   min-height: 100%;
   overflow: auto;
-  padding: 5%;
   position: relative;
   transition: background 1.0s ease-in-out;
   width: 100%;
-  z-index: $z-index-main-page;
+  z-index: $z-index-view-container;
 }

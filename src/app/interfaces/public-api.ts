@@ -22,3 +22,9 @@ export enum Difficulty {
   medium = 'MEDIUM',
   hard = 'HARD'
 }
+
+export enum CellType {
+  empty = 'EMPTY',
+  snake = 'SNAKE',
+  food = 'FOOD'
+}

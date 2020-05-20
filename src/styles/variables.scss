@@ -3,11 +3,8 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=latin-ext');
 
 /* Scaffolding */
-$main-view-height: 41vh;
-$weather-card-height: 200px;
-$weather-card-width: 120px;
-$sun-dimension: 60px;
-$moon-dimension: 100px;
+//$main-container-height: 41vh;
+//$main-container-width: 41vh;
 
 /* Fonts */
 $font-default: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -52,17 +49,9 @@ $border-radius-default: 5px;
 
 /* Z-indexes */
 $z-index-main-page: 0;
-$z-index-day-time-view: 100;
-$z-index-stars: 200;
-$z-index-sun: 300;
-$z-index-moon: 400;
-$z-index-clouds: 500;
-$z-index-lightning: 600;
-$z-index-rain: 700;
-$z-index-snow: 700;
-$z-index-fog: 800;
-$z-index-water-drops: 900;
+$z-index-view-container: 100;
+$z-index-modal: 200;
 
 /* Box-shadows */
 $box-shadow-default: 0 0 5px 0 $color-box-shadow;
-$box-shadow-hover: 0 0 10px 0 $color-box-shadow-hover;
+$box-shadow-active: 0 0 10px 0 $color-box-shadow-active;
