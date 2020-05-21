@@ -28,3 +28,10 @@ export enum CellType {
   snake = 'SNAKE',
   food = 'FOOD'
 }
+
+export enum BoardSize {
+ small = 7,
+ medium = 10,
+ large = 15,
+ extraLarge = 20
+}

@@ -1,15 +1,20 @@
-<div class="app-game-board" fxLayoutAlign="start start">
+<div class="app-game-board">
 
-  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>
-  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>
-  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>
+<!--  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>-->
+<!--  <app-board-cell [cellType]="'SNAKE'"></app-board-cell>-->
+<!--  <app-board-cell [cellType]="'FOOD'"></app-board-cell>-->
 
-  <app-board-cell [cellType]="'SNAKE'"></app-board-cell>
-  <app-board-cell [cellType]="'SNAKE'"></app-board-cell>
-
-  <app-board-cell [cellType]="'FOOD'"></app-board-cell>
-
-  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>
-  <app-board-cell [cellType]="'EMPTY'"></app-board-cell>
-
+  <div
+    *ngFor="let value of boardSize | NumberToIterablePipe; index as i"
+    class="app-game-board__row-container"
+  >
+    <div class="app-game-board__row" fxLayoutAlign="start start">
+<!-- TODO: cell type should be acquired from state via cell index  -->
+      <app-board-cell
+        *ngFor="let value of boardSize | NumberToIterablePipe"
+        [cellType]="getRandomCellType()"
+      >
+      </app-board-cell>
+    </div>
+  </div>
 </div>

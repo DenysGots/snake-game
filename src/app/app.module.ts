@@ -21,6 +21,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { GameBoardComponent } from './components/game-board/game-board.component';
 import { BoardCellComponent } from './components/board-cell/board-cell.component';
 
+import { NumberToIterablePipe } from './pipes/numberToIterable.pipe';
+
 export function initApp(config: Config) {
   return () => config.init();
 }
@@ -30,7 +32,8 @@ export function initApp(config: Config) {
     AppComponent,
     MainPageComponent,
     GameBoardComponent,
-    BoardCellComponent
+    BoardCellComponent,
+    NumberToIterablePipe
   ],
   imports: [
     CommonModule,

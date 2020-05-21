@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 import { MainService } from '../../services/main.service';
+import { CellType, BoardSize } from '../../interfaces/public-api';
 
 @Component({
   selector: 'app-game-board',
@@ -26,5 +27,16 @@ import { MainService } from '../../services/main.service';
   ]
 })
 export class GameBoardComponent {
+  @Input()
+  boardSize: BoardSize = BoardSize.medium;
+
   constructor() {}
+
+  // TODO: delete
+  getRandomCellType(): CellType {
+    const randomNumber = Math.round(Math.random() * 2);
+    const cellTypes = Object.values(CellType);
+    return cellTypes[randomNumber];
+  }
+
 }
