@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
 import { MainService } from '../../services/main.service';
@@ -25,6 +25,10 @@ import { MainService } from '../../services/main.service';
     ])
   ]
 })
-export class MainPageComponent {
+export class MainPageComponent implements OnInit {
   constructor(private mainService: MainService) {}
+
+  ngOnInit() {
+    this.mainService.initiateApplication();
+  }
 }

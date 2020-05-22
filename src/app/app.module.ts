@@ -15,13 +15,13 @@ import { AppComponent } from './app.component';
 import { Config } from './app.config';
 import { routes } from './app.routing';
 
-import { metaReducers, reducers } from './reducers';
-
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { GameBoardComponent } from './components/game-board/game-board.component';
 import { BoardCellComponent } from './components/board-cell/board-cell.component';
 
 import { NumberToIterablePipe } from './pipes/numberToIterable.pipe';
+
+import { boardReducer } from './reducers/board-reducers';
 
 export function initApp(config: Config) {
   return () => config.init();
@@ -46,9 +46,7 @@ export function initApp(config: Config) {
     BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers
-    })
+    StoreModule.forRoot({ board: boardReducer })
   ],
   providers: [
     {

@@ -11,4 +11,8 @@ export class MainService {
     private httpService: HttpService,
     private stateService: StateService
   ) {}
+
+  initiateApplication() {
+    this.stateService.resetState();
+  }
 }

@@ -1,8 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
+import { Component, Input, OnInit } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
-import { MainService } from '../../services/main.service';
-import { CellType, BoardSize } from '../../interfaces/public-api';
+import { CellType, BoardSize, BoardState } from '../../interfaces/public-api';
+import { StateService } from '../../services/state.service';
 
 @Component({
   selector: 'app-game-board',
@@ -26,11 +29,20 @@ import { CellType, BoardSize } from '../../interfaces/public-api';
     ])
   ]
 })
-export class GameBoardComponent {
+export class GameBoardComponent implements OnInit {
   @Input()
   boardSize: BoardSize = BoardSize.medium;
 
-  constructor() {}
+  boardSize$: Observable<number>
+
+  constructor(
+    private store: Store<{ board: BoardState }>,
+    private stateService: StateService
+  ) {}
+
+  ngOnInit() {
+    this.boardSize$ = this.stateService.getBoardSize();
+  }
 
   // TODO: delete
   getRandomCellType(): CellType {

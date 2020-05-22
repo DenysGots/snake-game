@@ -1,7 +1,7 @@
 /* Interfaces */
-export interface State {
+export interface BoardState extends Object {
   board: {
-    size: number;
+    size: BoardSize;
     food: []
   };
   snake: {
@@ -35,3 +35,15 @@ export enum BoardSize {
  large = 15,
  extraLarge = 20
 }
+
+/* Variables */
+export const initialState: BoardState = {
+  board: {
+    size: BoardSize.medium,
+    food: []
+  },
+  snake: {
+    segments: []
+  },
+  difficulty: Difficulty.medium
+};
