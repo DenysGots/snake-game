@@ -43,7 +43,7 @@ export const initialState: BoardState = {
     food: []
   },
   snake: {
-    segments: []
+    segments: [] // TODO must be initialized at the center of the board
   },
   difficulty: Difficulty.medium
 };

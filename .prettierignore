@@ -1,0 +1,7 @@
+node_modules
+/package.json
+apps/showcase/src/documentation/styles/
+*.html
+*.json
+*.js
+*.md
