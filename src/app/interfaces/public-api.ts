@@ -2,12 +2,12 @@
 export interface BoardState extends Object {
   board: {
     size: BoardSize;
-    food: []
+    food: [];
   };
   snake: {
     segments: [];
   };
-  difficulty: Difficulty
+  difficulty: Difficulty;
 }
 
 /* Types */
@@ -30,10 +30,10 @@ export enum CellType {
 }
 
 export enum BoardSize {
- small = 7,
- medium = 10,
- large = 15,
- extraLarge = 20
+  small = 7,
+  medium = 10,
+  large = 15,
+  extraLarge = 20
 }
 
 /* Variables */

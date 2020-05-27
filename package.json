@@ -19,7 +19,7 @@
     "serve:ssr": "node dist/universal-starter-v9/server/main.js",
     "dev:ssr": "ng run universal-starter-v9:serve-ssr",
     "dev:local": "nodemon --delay 5 --watch src/ -e ts,html,scss --exec \"npm run build:ssr:local && npm run serve:ssr --configuration=local\"",
-    "prod": "prettier --write \"src/**/*.vue\"",
+    "prod": "prettier --write \"src/**/*.{ts,html,css}\"",
     "prebuild:ssr": "ngcc",
     "prerender": "ng run universal-starter-v9:prerender",
     "postinstall": "ngcc",

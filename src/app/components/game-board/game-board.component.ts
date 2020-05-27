@@ -13,19 +13,8 @@ import { StateService } from '../../services/state.service';
   styleUrls: ['./game-board.component.scss'],
   animations: [
     trigger('enterLeaveTrigger', [
-      transition(
-        ':enter',
-        [
-          style({ opacity: 0 }),
-          animate('1s', style({ opacity: 1 }))
-        ]
-      ),
-      transition(
-        ':leave',
-        [
-          animate('1s', style({ opacity: 0 }))
-        ]
-      )
+      transition(':enter', [style({ opacity: 0 }), animate('1s', style({ opacity: 1 }))]),
+      transition(':leave', [animate('1s', style({ opacity: 0 }))])
     ])
   ]
 })
@@ -33,12 +22,9 @@ export class GameBoardComponent implements OnInit {
   @Input()
   boardSize: BoardSize = BoardSize.medium;
 
-  boardSize$: Observable<number>
+  boardSize$: Observable<number>;
 
-  constructor(
-    private store: Store<{ board: BoardState }>,
-    private stateService: StateService
-  ) {}
+  constructor(private store: Store<{ board: BoardState }>, private stateService: StateService) {}
 
   ngOnInit() {
     this.boardSize$ = this.stateService.getBoardSize();
@@ -50,5 +36,4 @@ export class GameBoardComponent implements OnInit {
     const cellTypes = Object.values(CellType);
     return cellTypes[randomNumber];
   }
-
 }

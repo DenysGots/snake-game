@@ -28,13 +28,7 @@ export function initApp(config: Config) {
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainPageComponent,
-    GameBoardComponent,
-    BoardCellComponent,
-    NumberToIterablePipe
-  ],
+  declarations: [AppComponent, MainPageComponent, GameBoardComponent, BoardCellComponent, NumberToIterablePipe],
   imports: [
     CommonModule,
     HttpClientModule,
