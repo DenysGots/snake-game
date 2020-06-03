@@ -11,5 +11,9 @@ export class MainService {
 
   initiateApplication() {
     this.stateService.resetState();
+
+    // initiate movement by setting interval and emitting snake change on each tick
+    // initiate interval to set food on each tick
+    // update state on each action an rewrite view
   }
 }

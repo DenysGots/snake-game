@@ -18,6 +18,8 @@ export class StateService {
   }
 
   getBoardSize() {
-    return this.store.pipe(select((state: { board: BoardState }) => state.board.board.size));
+    return this.store.pipe(
+      select((state: { board: BoardState }) => state.board.board.size)
+    );
   }
 }
