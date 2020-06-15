@@ -22,4 +22,16 @@ export class StateService {
       select((state: { board: BoardState }) => state.board.board.size)
     );
   }
+
+  getCurrentGameSpeed() {
+    return this.store.pipe(
+      select((state: { board: BoardState }) => state.board.gameSpeed)
+    );
+  }
+
+  getCurrentGameDifficulty() {
+    return this.store.pipe(
+      select((state: { board: BoardState }) => state.board.difficulty)
+    );
+  }
 }

@@ -20,9 +20,9 @@ export type ConfigFile = {
 
 /* Enums */
 export enum Difficulty {
-  easy = 'EASY',
+  slow = 'SLOW',
   medium = 'MEDIUM',
-  hard = 'HARD'
+  fast = 'FAST'
 }
 
 export enum CellType {
@@ -56,7 +56,12 @@ export enum GameSpeed {
   fast = 5000
 }
 
-export enum FoodAppearanceSpeed {
+export enum ChangeGameSpeedDelay {
+  slow = 30000,
+  medium = 40000
+}
+
+export enum FoodAppearanceDelay {
   slow = 10000,
   medium = 8000,
   fast = 6000
@@ -75,7 +80,7 @@ export const initialState: BoardState = {
       }
     ]
   },
-  difficulty: Difficulty.easy,
+  difficulty: Difficulty.slow,
   gameSpeed: GameSpeed.slow,
   movementDirection: MovementDirection.top
 };
