@@ -55,7 +55,7 @@ export class MainService {
     // change difficulty and game speed, easy => medium => hard
 
     // restart food spawn timeout
-    this.foodSpawnTimer && this.foodSpawnTimer.clearInterval();
+    this.foodSpawnTimer?.clearInterval();
   }
 
   private startFoodSpawnTimer() {
