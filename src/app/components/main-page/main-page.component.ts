@@ -18,6 +18,7 @@ export class MainPageComponent implements OnInit {
   constructor(private mainService: MainService) {}
 
   ngOnInit() {
+    // TODO: throws errors on init, investigate and fix
     this.mainService.initiateApplication();
   }
 }
